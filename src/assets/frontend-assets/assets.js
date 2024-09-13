@@ -22,26 +22,33 @@ import arrow_right from './right_arrow.png'
 import arrow_left from './left_arrow.png'
 import spotify_logo from './spotify_logo.png'
 import clock_icon from './clock_icon.png'
-import img1 from './img1.jpg'
-import img2 from './img2.jpg'
-import img3 from './img3.jpg'
-import img4 from './img4.jpg'
-import img5 from './img5.jpg'
-import img6 from './img6.jpg'
-import img7 from './img7.jpg'
+import blue_star from './blue_star.jpg'
+import manasilaayo from './manasilaayo.jpeg'
+import Lover from './Lover.jpeg'
+import Get_on_the_floor from './Get_on_the_floor.jpg'
+import Kadhal_Yenbathu from './Kadhal-Yenbathu.jpeg'
+import brother from './brother.jpg'
+import Raja_Rani from './Raja_Rani.jpg'
 import img8 from './img8.jpg'
 import img9 from './img9.jpg'
 import img10 from './img10.jpg'
 import img11 from './img11.jpg'
-import img12 from './img12.jpg'
-import img13 from './img13.jpg'
-import img14 from './img14.jpg'
+import Kalki from './Kalki.jpg'
+import thiruchitrampazlam from './thiruchireampalam.jpeg'
 import img15 from './img15.jpg'
+import Kaathumela from './Kaathumela.jpg'
 import img16 from './img16.jpg'
-import song1 from  './song1.mp3'
-import song2 from  './song2.mp3'
-import song3 from  './song3.mp3'
+import Get_On_The_Floor from  './Get On The Floor -Jennifer Lopez.mp3'
+import Manasilaayo from  './Manasilaayo.mp3'
+import Theansudare from  './Theansudare.mp3'
 import ShapeOfYou from './ShapeOfYou.mp3'
+import Kaathu_Mela from './Kaathu Mela.mp3'
+import Makkamishi from './Makkamishi.mp3'
+import Kadhal_YenbathuSong from './Kadhal-Yenbathu.mp3'
+import Life_of_Pazham from './Life-of-Pazham.mp3'
+import Imaye_Imaye from './Imaye-Imaye.mp3'
+import Ta_Takkara from './Ta Takkara.mp3'
+import Railin_Oligal from './Railin Oligal.mp3'
 
 export const assets = {
     bell_icon,
@@ -119,7 +126,7 @@ export const albumsData = [
 export const songsData = [
     {
         id:0,
-        name: "Song nine",
+        name: "Shape of you",
         image: img11,
         file: ShapeOfYou,
         desc:"Put a smile on your face with these happy tunes",
@@ -127,67 +134,84 @@ export const songsData = [
     },
     {
         id:1,
-        name: "Song Two",
-        image: img2,
-        file:song2,
+        name: "Kaathu Mela",
+        image: Kaathumela,
+        file: Kaathu_Mela,
         desc:"Put a smile on your face with these happy tunes",
-        duration:"2:20"
+        duration:"3:16"
     },
     {
         id:2,
-        name: "Song Three",
-        image: img3,
-        file:song3,
+        name: "Makkamishi",
+        image: brother,
+        file: Makkamishi,
+        desc:"Put a smile on your face with these happy tunes",
+        duration:"4:14"
+    },
+    {
+        id:3,
+        name: "manasilaayo",
+        image: manasilaayo,
+        file: Manasilaayo,
+        desc:"Put a smile on your face with these happy tunes",
+        duration:"3:55"
+    },
+    {
+        id:4,
+        name: "Theansudare",
+        image: Lover,
+        file: Theansudare,
         desc:"Put a smile on your face with these happy tunes",
         duration:"2:32"
     },
     {
-        id:3,
-        name: "Song Four",
-        image: img4,
-        file:song1,
+        id:5,
+        name: "Get On The Floor",
+        image: Get_on_the_floor,
+        file: Get_On_The_Floor,
         desc:"Put a smile on your face with these happy tunes",
-        duration:"2:50"
+        duration:"3:40"
     },
     {
-        id:4,
-        name: "Song Five",
-        image: img5,
-        file:song2,
+        id:6,
+        name: "Kadhal Yenbathu",
+        image: Kadhal_Yenbathu,
+        file: Kadhal_YenbathuSong,
         desc:"Put a smile on your face with these happy tunes",
         duration:"3:10"
     },
     {
-        id:5,
-        name: "Song Six",
-        image: img14    ,
-        file:song3,
+        id:7,
+        name: "Life of Pazham",
+        image: thiruchitrampazlam,
+        file: Life_of_Pazham,
         desc:"Put a smile on your face with these happy tunes",
         duration:"2:45"
     },
     {
-        id:6,
-        name: "Song Seven",
-        image: img7,
-        file:song1,
+        id:8,
+        name: "Imaye Imaye",
+        image: Raja_Rani,
+        file: Imaye_Imaye,
         desc:"Put a smile on your face with these happy tunes",
         duration:"2:18"
     },
     {
-        id:7,
-        name: "Song Eight",
-        image: img12,
-        file:song2,
+        id:9,
+        name: "Ta Takkara",
+        image: Kalki,
+        file: Ta_Takkara,
         desc:"Put a smile on your face with these happy tunes",
         duration:"2:35"
     },
     {
-        id:8,
-        name: "Song One",
-        image: img1,
-        file:song1,
+        id:10,
+        name: "Railin Oligal",
+        image: blue_star,
+        file: Railin_Oligal,
         desc:"Put a smile on your face with these happy tunes",
         duration:"3:00"
     }
+    
     
 ]
