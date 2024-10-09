@@ -4,7 +4,7 @@ import { PlayerContext } from '../Context/PlayerContext'
 
 const Player = () => {
     const {seekbg, seekBar, playStatus, play, pause, track, time , next, previous, seeksong} = useContext(PlayerContext);
-    return (
+    return track ? (
         <div className='h-[10%] bg-black flex justify-between items-center text-white px-4'>
             <div className='hidden lg:flex items-center gap-4'>
                 <img src={track.image} className='w-12' alt="" />
@@ -43,7 +43,7 @@ const Player = () => {
                     <img src={assets.zoom_icon} className='w-4' alt="" />
                 </div>
         </div>
-    )
+    ): null
 }
 
 export default Player

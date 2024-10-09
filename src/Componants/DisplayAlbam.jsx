@@ -1,14 +1,26 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Navbar from './Navbar'
 import { useParams } from 'react-router-dom'
-import { albumsData, assets, songsData } from '../assets/frontend-assets/assets';
+import { assets } from '../assets/frontend-assets/assets';
 import { PlayerContext } from '../Context/PlayerContext';
 
-const DisplayAlbam = () => {
+const DisplayAlbam = ({album}) => {
+    console.log(album)
     const { id } = useParams();
-    const albumData = albumsData[id];
-    const {playWidthId} = useContext(PlayerContext)
-    return (
+    const [albumData, setAlbumData] = useState("");
+    const { playWidthId, albumsData, songsData } = useContext(PlayerContext)
+    console.log("Albumdata in DisplayAlbum")
+    console.log({albumsData})
+
+    useEffect(() => {
+        albumsData.map((item) => {
+            if (item._id === id) {
+                setAlbumData(item)
+            }
+        })
+    }, [])
+    
+    return albumData? (
         <>
             <div>
                 <Navbar />
@@ -35,10 +47,10 @@ const DisplayAlbam = () => {
                 </div>
                 <hr />
                 {
-                    songsData.map((item, index) => (
-                        <div onClick={()=>playWidthId(item.id)} className='grid grid-cols-3 sm:grid-cols-4 gap-2 p-2 items-center text-[#a7a7a7] hover:bg-[#ffffff2b] cursor-pointer' key={index}>
+                    songsData.filter((item)=>(item.albam === album.name)).map((item, index) => (
+                        <div onClick={() => playWidthId(item._id)} className='grid grid-cols-3 sm:grid-cols-4 gap-2 p-2 items-center text-[#a7a7a7] hover:bg-[#ffffff2b] cursor-pointer' key={index}>
                             <p className='text-white'>
-                                <b className='mr-4 text-[#a7a7a7]'>{index+1}</b>
+                                <b className='mr-4 text-[#a7a7a7]'>{index + 1}</b>
                                 <img src={item.image} className='inline w-10 mr-5' alt="" />
                                 {item.name}
                             </p>
@@ -50,7 +62,7 @@ const DisplayAlbam = () => {
                 }
             </div>
         </>
-    )
+    ): null
 }
 
 export default DisplayAlbam
