@@ -64,11 +64,11 @@ const PlayerContextProvider = (props) => {
         try {
             const responce = await axios.get(`${url}/api/song/list`)
             setSongsData(responce.data.message)
-            console.log("Song data")
-            console.log(responce.data.message)
+            // console.log("Song data")
+            // console.log(responce.data.message)
             setTrack(responce.data.message[0])
         } catch (error) {
-            console.log("Song Fetching issue")
+            // console.log("Song Fetching issue")
         }
     }
 
@@ -76,10 +76,10 @@ const PlayerContextProvider = (props) => {
         try {
             const responce = await axios.get(`${url}/api/Albam/list`)
             setalbumsData(responce.data.message)
-            console.log("Album data")
-            console.log(responce.data.message)
+            // console.log("Album data")
+            // console.log(responce.data.message)
         } catch (error) {
-            console.log("Album Fetching issue")
+            // console.log("Album Fetching issue")
         }
     }
 

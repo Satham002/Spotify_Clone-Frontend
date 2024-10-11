@@ -5,7 +5,7 @@ import { PlayerContext } from '../Context/PlayerContext'
 const Player = () => {
     const {seekbg, seekBar, playStatus, play, pause, track, time , next, previous, seeksong} = useContext(PlayerContext);
     return track ? (
-        <div className='h-[10%] bg-black flex justify-between items-center text-white px-4'>
+        <div className='h-[10%] bg-black flex justify-between items-center text-white px-4 bottom-0'>
             <div className='hidden lg:flex items-center gap-4'>
                 <img src={track.image} className='w-12' alt="" />
                 <div>

@@ -5,12 +5,12 @@ import { assets } from '../assets/frontend-assets/assets';
 import { PlayerContext } from '../Context/PlayerContext';
 
 const DisplayAlbam = ({album}) => {
-    console.log(album)
+    // console.log(album)
     const { id } = useParams();
     const [albumData, setAlbumData] = useState("");
     const { playWidthId, albumsData, songsData } = useContext(PlayerContext)
-    console.log("Albumdata in DisplayAlbum")
-    console.log({albumsData})
+    // console.log("Albumdata in DisplayAlbum")
+    // console.log({albumsData})
 
     useEffect(() => {
         albumsData.map((item) => {
@@ -27,6 +27,7 @@ const DisplayAlbam = ({album}) => {
                 <div className='mt-10 flex gap-8 flex-col md:flex-row md:items-end'>
                     <img src={albumData.image} className='w-48 rounded' alt="" />
                     <div className='flex flex-col'>
+                    {/* {console.log(albumData)} */}
                         <p>Playlist</p>
                         <h2 className='text-5xl font-bold mb-4 md:text-7xl'>{albumData.name}</h2>
                         <h4>{albumData.desc}</h4>
