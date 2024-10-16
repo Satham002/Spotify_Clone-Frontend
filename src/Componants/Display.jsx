@@ -10,7 +10,7 @@ const Display = () => {
     const location = useLocation();
     const isAlbam = location.pathname.includes("albam");
     const albamId = isAlbam ? location.pathname.split('/').pop() : "";
-    // console.log(albamId)
+    
     const bgColour = isAlbam && albumsData.length > 0 ? albumsData.find((x) => (x._id == albamId)).bgColor : "#121212";
     useEffect(() => {
         if (isAlbam) {
