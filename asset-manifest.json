@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.ad46e3eb.css",
-    "main.js": "/static/js/main.8584fb30.js",
+    "main.js": "/static/js/main.e8991ee8.js",
     "static/media/Kadhal-Yenbathu.mp3": "/static/media/Kadhal-Yenbathu.3a3c15b87d510c6ec3ab.mp3",
     "static/media/Ta Takkara.mp3": "/static/media/Ta Takkara.37d824edfcb74a52c1c2.mp3",
     "static/media/Makkamishi.mp3": "/static/media/Makkamishi.598c7922305a3943d1ae.mp3",
@@ -30,10 +30,10 @@
     "static/media/img8.jpg": "/static/media/img8.84a719877c3acafe9abb.jpg",
     "index.html": "/index.html",
     "main.ad46e3eb.css.map": "/static/css/main.ad46e3eb.css.map",
-    "main.8584fb30.js.map": "/static/js/main.8584fb30.js.map"
+    "main.e8991ee8.js.map": "/static/js/main.e8991ee8.js.map"
   },
   "entrypoints": [
     "static/css/main.ad46e3eb.css",
-    "static/js/main.8584fb30.js"
+    "static/js/main.e8991ee8.js"
   ]
 }
