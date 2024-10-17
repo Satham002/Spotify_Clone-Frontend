@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Spotify_Clone-Frontend/static/css/main.ad46e3eb.css",
-    "main.js": "/Spotify_Clone-Frontend/static/js/main.a9874978.js",
+    "main.css": "/Spotify_Clone-Frontend/static/css/main.640b526a.css",
+    "main.js": "/Spotify_Clone-Frontend/static/js/main.642c4b06.js",
     "static/media/Kadhal-Yenbathu.mp3": "/Spotify_Clone-Frontend/static/media/Kadhal-Yenbathu.3a3c15b87d510c6ec3ab.mp3",
     "static/media/Ta Takkara.mp3": "/Spotify_Clone-Frontend/static/media/Ta Takkara.37d824edfcb74a52c1c2.mp3",
     "static/media/Makkamishi.mp3": "/Spotify_Clone-Frontend/static/media/Makkamishi.598c7922305a3943d1ae.mp3",
@@ -29,11 +29,11 @@
     "static/media/img9.jpg": "/Spotify_Clone-Frontend/static/media/img9.ef9686312a7aad6fb6ba.jpg",
     "static/media/img8.jpg": "/Spotify_Clone-Frontend/static/media/img8.84a719877c3acafe9abb.jpg",
     "index.html": "/Spotify_Clone-Frontend/index.html",
-    "main.ad46e3eb.css.map": "/Spotify_Clone-Frontend/static/css/main.ad46e3eb.css.map",
-    "main.a9874978.js.map": "/Spotify_Clone-Frontend/static/js/main.a9874978.js.map"
+    "main.640b526a.css.map": "/Spotify_Clone-Frontend/static/css/main.640b526a.css.map",
+    "main.642c4b06.js.map": "/Spotify_Clone-Frontend/static/js/main.642c4b06.js.map"
   },
   "entrypoints": [
-    "static/css/main.ad46e3eb.css",
-    "static/js/main.a9874978.js"
+    "static/css/main.640b526a.css",
+    "static/js/main.642c4b06.js"
   ]
 }
