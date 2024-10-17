@@ -9,7 +9,7 @@ const Sidebar = () => {
             <div className='bg-[#121212] h-[15%] rounded flex flex-col justify-around'>
                 <div className='flex items-center gap-3 pl-8 cursor-pointer'>
                     <img src={assets.home_icon} className='w-6' alt="" />
-                    <p onClick={()=>Navigate('/')} className='font-bold'>Home</p>
+                    <p onClick={()=>Navigate('/Spotify_Clone-Frontend')} className='font-bold'>Home</p>
                 </div>
                 <div className='flex items-center gap-3 pl-8 cursor-pointer'>
                     <img src={assets.search_icon} className='w-6' alt="" />
