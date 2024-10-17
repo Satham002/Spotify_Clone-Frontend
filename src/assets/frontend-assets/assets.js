@@ -49,6 +49,7 @@ import Life_of_Pazham from './Life-of-Pazham.mp3'
 import Imaye_Imaye from './Imaye-Imaye.mp3'
 import Ta_Takkara from './Ta Takkara.mp3'
 import Railin_Oligal from './Railin Oligal.mp3'
+import logo_small from './logo_small.png'
 
 export const assets = {
     bell_icon,
@@ -75,7 +76,8 @@ export const assets = {
     arrow_right,
     spotify_logo,
     clock_icon,
-    ShapeOfYou
+    ShapeOfYou,
+    logo_small
 }
 
 export const albumsData = [
