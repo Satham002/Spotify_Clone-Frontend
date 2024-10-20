@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext} from 'react'
 import { assets } from '../assets/frontend-assets/assets'
 import { useNavigate } from 'react-router-dom'
 import { PlayerContext } from '../Context/PlayerContext'
@@ -16,7 +16,7 @@ const Navbar = () => {
                 <div className='flex items-center gap-4'>
                     <p className='bg-white text-black rounded-2xl text-[15px] px-4 py-1 hidden md:block cursor-pointer'>Explore Premium</p>
                     <p className='bg-black cursor-pointer px-4 py-1 rounded-2xl text-[15px]'>Install App</p>
-                    <p className='bg-white text-black px-4 py-1 rounded-full flex items-center justify-center cursor-pointer' onClick={()=>setShowLogin(true)}>Login</p>
+                    <p className='bg-white text-black px-4 py-1 rounded-full flex items-center justify-center cursor-pointer hover:bg-black hover:text-white' onClick={()=>setShowLogin(true)}>Login</p>
 
                 </div>
             </div>

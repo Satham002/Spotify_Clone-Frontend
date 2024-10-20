@@ -38,9 +38,9 @@ import thiruchitrampazlam from './thiruchireampalam.jpeg'
 import img15 from './img15.jpg'
 import Kaathumela from './Kaathumela.jpg'
 import img16 from './img16.jpg'
-import Get_On_The_Floor from  './Get On The Floor -Jennifer Lopez.mp3'
-import Manasilaayo from  './Manasilaayo.mp3'
-import Theansudare from  './Theansudare.mp3'
+import Get_On_The_Floor from './Get On The Floor -Jennifer Lopez.mp3'
+import Manasilaayo from './Manasilaayo.mp3'
+import Theansudare from './Theansudare.mp3'
 import ShapeOfYou from './ShapeOfYou.mp3'
 import Kaathu_Mela from './Kaathu Mela.mp3'
 import Makkamishi from './Makkamishi.mp3'
@@ -50,6 +50,9 @@ import Imaye_Imaye from './Imaye-Imaye.mp3'
 import Ta_Takkara from './Ta Takkara.mp3'
 import Railin_Oligal from './Railin Oligal.mp3'
 import logo_small from './logo_small.png'
+import Google_search from './Google_search.png'
+import Facebook from './facebook.png'
+import apple from './apple.png'
 
 export const assets = {
     bell_icon,
@@ -77,143 +80,146 @@ export const assets = {
     spotify_logo,
     clock_icon,
     ShapeOfYou,
-    logo_small
+    logo_small,
+    Google_search,
+    Facebook,
+    apple
 }
 
 export const albumsData = [
-    {   
-        id:0,
+    {
+        id: 0,
         name: "Top 50 Global",
         image: img8,
-        desc:"Your weekly update of the most played tracks",
-        bgColor:"#2a4365"
+        desc: "Your weekly update of the most played tracks",
+        bgColor: "#2a4365"
     },
-    {   
-        id:1,
+    {
+        id: 1,
         name: "Top 50 India",
         image: img9,
-        desc:"Your weekly update of the most played tracks",
-        bgColor:"#22543d"
+        desc: "Your weekly update of the most played tracks",
+        bgColor: "#22543d"
     },
-    {   
-        id:2,
+    {
+        id: 2,
         name: "Trending India",
         image: img10,
-        desc:"Your weekly update of the most played tracks",
-        bgColor:"#742a2a"
+        desc: "Your weekly update of the most played tracks",
+        bgColor: "#742a2a"
     },
-    {   
-        id:3,
+    {
+        id: 3,
         name: "Trending Global",
         image: img16,
-        desc:"Your weekly update of the most played tracks",
-        bgColor:"#44337a"
+        desc: "Your weekly update of the most played tracks",
+        bgColor: "#44337a"
     },
-    {   
-        id:4,
+    {
+        id: 4,
         name: "Mega Hits",
         image: img11,
-        desc:"Your weekly update of the most played tracks",
-        bgColor:"#234e52"
+        desc: "Your weekly update of the most played tracks",
+        bgColor: "#234e52"
     },
-    {   
-        id:5,
+    {
+        id: 5,
         name: "Happy Favorites",
         image: img15,
-        desc:"Your weekly update of the most played tracks",
-        bgColor:"#744210"
+        desc: "Your weekly update of the most played tracks",
+        bgColor: "#744210"
     }
 ]
 
 export const songsData = [
     {
-        id:0,
+        id: 0,
         name: "Shape of you",
         image: img11,
         file: ShapeOfYou,
-        desc:"Put a smile on your face with these happy tunes",
-        duration:"3:53"
+        desc: "Put a smile on your face with these happy tunes",
+        duration: "3:53"
     },
     {
-        id:1,
+        id: 1,
         name: "Kaathu Mela",
         image: Kaathumela,
         file: Kaathu_Mela,
-        desc:"Put a smile on your face with these happy tunes",
-        duration:"3:16"
+        desc: "Put a smile on your face with these happy tunes",
+        duration: "3:16"
     },
     {
-        id:2,
+        id: 2,
         name: "Makkamishi",
         image: brother,
         file: Makkamishi,
-        desc:"Put a smile on your face with these happy tunes",
-        duration:"4:14"
+        desc: "Put a smile on your face with these happy tunes",
+        duration: "4:14"
     },
     {
-        id:3,
+        id: 3,
         name: "manasilaayo",
         image: manasilaayo,
         file: Manasilaayo,
-        desc:"Put a smile on your face with these happy tunes",
-        duration:"3:55"
+        desc: "Put a smile on your face with these happy tunes",
+        duration: "3:55"
     },
     {
-        id:4,
+        id: 4,
         name: "Theansudare",
         image: Lover,
         file: Theansudare,
-        desc:"Put a smile on your face with these happy tunes",
-        duration:"2:32"
+        desc: "Put a smile on your face with these happy tunes",
+        duration: "2:32"
     },
     {
-        id:5,
+        id: 5,
         name: "Get On The Floor",
         image: Get_on_the_floor,
         file: Get_On_The_Floor,
-        desc:"Put a smile on your face with these happy tunes",
-        duration:"3:40"
+        desc: "Put a smile on your face with these happy tunes",
+        duration: "3:40"
     },
     {
-        id:6,
+        id: 6,
         name: "Kadhal Yenbathu",
         image: Kadhal_Yenbathu,
         file: Kadhal_YenbathuSong,
-        desc:"Put a smile on your face with these happy tunes",
-        duration:"3:10"
+        desc: "Put a smile on your face with these happy tunes",
+        duration: "3:10"
     },
     {
-        id:7,
+        id: 7,
         name: "Life of Pazham",
         image: thiruchitrampazlam,
         file: Life_of_Pazham,
-        desc:"Put a smile on your face with these happy tunes",
-        duration:"2:45"
+        desc: "Put a smile on your face with these happy tunes",
+        duration: "2:45"
     },
     {
-        id:8,
+        id: 8,
         name: "Imaye Imaye",
         image: Raja_Rani,
         file: Imaye_Imaye,
-        desc:"Put a smile on your face with these happy tunes",
-        duration:"2:18"
+        desc: "Put a smile on your face with these happy tunes",
+        duration: "2:18"
     },
     {
-        id:9,
+        id: 9,
         name: "Ta Takkara",
         image: Kalki,
         file: Ta_Takkara,
-        desc:"Put a smile on your face with these happy tunes",
-        duration:"2:35"
+        desc: "Put a smile on your face with these happy tunes",
+        duration: "2:35"
     },
     {
-        id:10,
+        id: 10,
         name: "Railin Oligal",
         image: blue_star,
         file: Railin_Oligal,
-        desc:"Put a smile on your face with these happy tunes",
-        duration:"3:00"
+        desc: "Put a smile on your face with these happy tunes",
+        duration: "3:00"
     }
-    
-    
+
+
 ]
