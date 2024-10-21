@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Spotify_Clone-Frontend/static/css/main.640b526a.css",
-    "main.js": "/Spotify_Clone-Frontend/static/js/main.642c4b06.js",
+    "main.css": "/Spotify_Clone-Frontend/static/css/main.ffea6f32.css",
+    "main.js": "/Spotify_Clone-Frontend/static/js/main.fdf19b4c.js",
     "static/media/Kadhal-Yenbathu.mp3": "/Spotify_Clone-Frontend/static/media/Kadhal-Yenbathu.3a3c15b87d510c6ec3ab.mp3",
     "static/media/Ta Takkara.mp3": "/Spotify_Clone-Frontend/static/media/Ta Takkara.37d824edfcb74a52c1c2.mp3",
     "static/media/Makkamishi.mp3": "/Spotify_Clone-Frontend/static/media/Makkamishi.598c7922305a3943d1ae.mp3",
@@ -28,12 +28,15 @@
     "static/media/img11.jpg": "/Spotify_Clone-Frontend/static/media/img11.b4899d0eb46a32545a7b.jpg",
     "static/media/img9.jpg": "/Spotify_Clone-Frontend/static/media/img9.ef9686312a7aad6fb6ba.jpg",
     "static/media/img8.jpg": "/Spotify_Clone-Frontend/static/media/img8.84a719877c3acafe9abb.jpg",
+    "static/media/Google_search.png": "/Spotify_Clone-Frontend/static/media/Google_search.cadee8cdb0c0afb1a713.png",
+    "static/media/facebook.png": "/Spotify_Clone-Frontend/static/media/facebook.49e67d43221b6bb1aa86.png",
+    "static/media/apple.png": "/Spotify_Clone-Frontend/static/media/apple.349b8008a796fbc1d1ba.png",
     "index.html": "/Spotify_Clone-Frontend/index.html",
-    "main.640b526a.css.map": "/Spotify_Clone-Frontend/static/css/main.640b526a.css.map",
-    "main.642c4b06.js.map": "/Spotify_Clone-Frontend/static/js/main.642c4b06.js.map"
+    "main.ffea6f32.css.map": "/Spotify_Clone-Frontend/static/css/main.ffea6f32.css.map",
+    "main.fdf19b4c.js.map": "/Spotify_Clone-Frontend/static/js/main.fdf19b4c.js.map"
   },
   "entrypoints": [
-    "static/css/main.640b526a.css",
-    "static/js/main.642c4b06.js"
+    "static/css/main.ffea6f32.css",
+    "static/js/main.fdf19b4c.js"
   ]
 }
