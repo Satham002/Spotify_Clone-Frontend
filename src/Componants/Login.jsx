@@ -11,7 +11,7 @@ const Login = () => {
         phone: "",
         password: ""
     })
-    const { setShowLogin, loginPage, SetloginPage, url } = useContext(PlayerContext)
+    const { setShowLogin, loginPage, SetloginPage, url,setUserData } = useContext(PlayerContext)
 
     const onValueChange = (e) => {
         const name = e.target.name;
@@ -38,9 +38,7 @@ const Login = () => {
 
             if (loginPage === "login") {
                 toast.success("login Sucess")
-
-                const { username, email } = responce.data.message
-
+                setUserData(responce.data.message)
             }
             if (loginPage === "signup") {
                 toast.success("Signup Sucess")

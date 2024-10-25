@@ -12,6 +12,7 @@ const PlayerContextProvider = (props) => {
     // const url = 'http://localhost:4000'
 
     const [songsData, setSongsData] = useState([]);
+    const [userData, setUserData] = useState()
     const [albumsData, setalbumsData] = useState([])
     const [track, setTrack] = useState(songsData[0]);
     const [playStatus, setPlayStatus] = useState(false);
@@ -122,7 +123,13 @@ const PlayerContextProvider = (props) => {
         playStatus, setPlayStatus,
         time, setTime,
         play, pause,
-        playWidthId, previous, next, seeksong, songsData, albumsData, showLogin, setShowLogin, loginPage, SetloginPage, url
+        playWidthId, 
+        previous, next, 
+        seeksong, songsData, 
+        albumsData, showLogin, 
+        setShowLogin, loginPage, 
+        SetloginPage, url,
+        userData, setUserData
 
     }
     return (
