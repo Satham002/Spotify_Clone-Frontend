@@ -4,7 +4,8 @@ import Player from './Componants/Player'
 import Display from './Componants/Display'
 import { PlayerContext } from './Context/PlayerContext'
 import Login from './Componants/Login'
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 // albumsData
 const App = () => {
 
@@ -12,6 +13,7 @@ const App = () => {
   
   return (
     <>
+    <ToastContainer />
       {showLogin ? <Login />:<></>}
       <div className='h-screen bg-black'>
         {songsData.length !== 0

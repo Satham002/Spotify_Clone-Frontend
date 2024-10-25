@@ -8,7 +8,8 @@ const PlayerContextProvider = (props) => {
     const audioRef = useRef();
     const seekbg = useRef();
     const seekBar = useRef();
-    const url = 'https://spotify-backend-irv1.onrender.com'
+    // const url = 'https://spotify-backend-irv1.onrender.com'
+    const url = 'http://localhost:4000'
 
     const [songsData, setSongsData] = useState([]);
     const [albumsData, setalbumsData] = useState([])
@@ -121,7 +122,7 @@ const PlayerContextProvider = (props) => {
         playStatus, setPlayStatus,
         time, setTime,
         play, pause,
-        playWidthId, previous, next, seeksong, songsData, albumsData,showLogin, setShowLogin, loginPage, SetloginPage
+        playWidthId, previous, next, seeksong, songsData, albumsData, showLogin, setShowLogin, loginPage, SetloginPage, url
 
     }
     return (

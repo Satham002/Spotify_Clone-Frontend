@@ -2,19 +2,61 @@ import React, { useContext } from 'react'
 import { useState } from 'react';
 import { PlayerContext } from '../Context/PlayerContext';
 import { assets } from '../assets/frontend-assets/assets.js';
+import axios from 'axios';
+import { toast } from 'react-toastify';
 const Login = () => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const { setShowLogin, loginPage, SetloginPage } = useContext(PlayerContext)
-    const handleSubmit = (e) => {
+    const [data, setData] = useState({
+        name: "",
+        email: "",
+        phone: "",
+        password: ""
+    })
+    const { setShowLogin, loginPage, SetloginPage, url } = useContext(PlayerContext)
+
+    const onValueChange = (e) => {
+        const name = e.target.name;
+        const value = e.target.value
+        setData(data => ({ ...data, [name]: value }))
+    }
+
+
+    const handleSubmit = async (e) => {
+
         e.preventDefault();
-        // Handle login submission logic
-        console.log('Logging in with:', { email, password });
+        let newurl = url
+        if (loginPage === "login") {
+            newurl += "/api/user/login"
+            console.log(newurl)
+        }
+        if (loginPage === "signup") {
+            newurl += "/api/user/signin"
+            console.log(newurl)
+        }
+
+        const responce = await axios.post(newurl, data)
+        if (responce.data.result) {
+
+            if (loginPage === "login") {
+                toast.success("login Sucess")
+
+                const { username, email } = responce.data.message
+
+            }
+            if (loginPage === "signup") {
+                toast.success("Signup Sucess")
+            }
+            setShowLogin(false)
+        }
+        else{
+            toast.error(`${responce.data.message}`)
+        }
+
+
     };
     return (
         <>
             <div className='grid place-items-center'>
-                <div className="absolute border border-white top-0 w-full max-w-md p-6 bg-gradient-to-b from-black to-gray-900 rounded-lg shadow-md">
+                <div className="absolute max-h-full overflow-y-scroll border border-white top-0 w-full max-w-md p-6 bg-gradient-to-b from-black to-gray-900 rounded-lg shadow-md">
                     <button onClick={() => setShowLogin(false)} class="absolute top-3 right-2 text-gray-500 hover:text-gray-700 font-bold focus:outline-none" aria-label="Close">
                         &times;
                     </button>
@@ -42,20 +84,51 @@ const Login = () => {
                         <hr className="flex-grow border-t border-gray-300" />
                     </div>
                     <form onSubmit={handleSubmit}>
+                        {loginPage === "signup" ? <>
+                            <div className="mb-4">
+                                <label className="block text-sm font-medium text-white" htmlFor="name">
+                                    Name
+                                </label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name='name'
+                                    className="w-full px-4 py-2 mt-2 text-gray-700 bg-black border rounded-lg focus:outline-none focus:ring-2 hover:text-white focus:ring-green-500 focus:border-transparent"
+                                    value={data.name}
+                                    onChange={onValueChange}
+                                    required
+                                />
+                            </div></> : null}
+
                         <div className="mb-4">
                             <label className="block text-sm font-medium text-white" htmlFor="email">
-                                Email or username
+                                {loginPage === "signup" ? "Email" : "Email or Phone Number"}
                             </label>
                             <input
-                                type="email"
+                                type="text"
                                 id="email"
+                                name='email'
                                 className="w-full px-4 py-2 mt-2 text-gray-700 bg-black border rounded-lg focus:outline-none focus:ring-2 hover:text-white focus:ring-green-500 focus:border-transparent"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
+                                value={data.email}
+                                onChange={onValueChange}
                                 required
                             />
                         </div>
-
+                        {loginPage === "signup" ? <>
+                            <div className="mb-6">
+                                <label className="block text-sm font-medium text-white" htmlFor="password">
+                                    Mobile Number
+                                </label>
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name='phone'
+                                    className="w-full px-4 py-2 mt-2 text-gray-700 bg-black border rounded-lg focus:outline-none focus:ring-2 hover:text-white focus:ring-green-500 focus:border-transparent"
+                                    value={data.phone}
+                                    onChange={onValueChange}
+                                    required
+                                />
+                            </div></> : null}
                         <div className="mb-6">
                             <label className="block text-sm font-medium text-white" htmlFor="password">
                                 Password
@@ -63,19 +136,19 @@ const Login = () => {
                             <input
                                 type="password"
                                 id="password"
+                                name='password'
                                 className="w-full px-4 py-2 mt-2 text-gray-700 bg-black border rounded-lg focus:outline-none focus:ring-2 hover:text-white focus:ring-green-500 focus:border-transparent"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
+                                value={data.password}
+                                onChange={onValueChange}
                                 required
                             />
                         </div>
-
                         <div className='flex gap-2'>
                             <button
                                 type="submit"
                                 className="font-semibold w-full px-4 py-2 mx-5 text-white bg-green-600 rounded-xl hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
                             >
-                                Login
+                                {loginPage === "login" ? "Login" : "Signin"}
                             </button>
                         </div>
                         {loginPage === "login" ? (
