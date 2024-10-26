@@ -18,6 +18,7 @@ const PlayerContextProvider = (props) => {
     const [playStatus, setPlayStatus] = useState(false);
     const [showLogin, setShowLogin] = useState(false)
     const [loginPage, SetloginPage] = useState("login")
+    const [showProfile, setShowProfile] = useState(false)
     const [time, setTime] = useState({
         currentTime: {
             secound: 0,
@@ -123,13 +124,14 @@ const PlayerContextProvider = (props) => {
         playStatus, setPlayStatus,
         time, setTime,
         play, pause,
-        playWidthId, 
-        previous, next, 
-        seeksong, songsData, 
-        albumsData, showLogin, 
-        setShowLogin, loginPage, 
+        playWidthId,
+        previous, next,
+        seeksong, songsData,
+        albumsData, showLogin,
+        setShowLogin, loginPage,
         SetloginPage, url,
-        userData, setUserData
+        userData, setUserData,
+        showProfile, setShowProfile
 
     }
     return (
