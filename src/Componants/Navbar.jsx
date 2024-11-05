@@ -3,18 +3,22 @@ import { assets } from '../assets/frontend-assets/assets'
 import { useNavigate } from 'react-router-dom'
 import { PlayerContext } from '../Context/PlayerContext'
 import Profile from './Profile'
+import Search from './Search'
 
 const Navbar = () => {
     const navigate = useNavigate();
     const { setShowLogin, userData, setUserData, showProfile, setShowProfile } = useContext(PlayerContext)
     return (
         <>
-        {showProfile?<Profile />:""}
+            {showProfile ? <Profile /> : ""}
             <div className='w-full flex justify-between items-center font-semibold'>
                 <div className='flex items-center gap-2'>
                     <img onClick={() => navigate(-1)} src={assets.arrow_left} className="w-8 bg-black p-2 rounded-2xl cursor-pointer" alt="" />
                     <img onClick={() => navigate(1)} src={assets.arrow_right} className="w-8 bg-black p-2 rounded-2xl cursor-pointer" alt="" />
                 </div>
+                {/* <div className="">
+                    <Search />
+                </div> */}
                 <div className='flex items-center gap-4'>
                     <p className='bg-white text-black rounded-2xl text-[15px] px-4 py-1 hidden md:block cursor-pointer'>Explore Premium</p>
                     <p className='bg-black cursor-pointer px-4 py-1 rounded-2xl text-[15px]'>Install App</p>

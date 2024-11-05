@@ -8,9 +8,8 @@ const PlayerContextProvider = (props) => {
     const audioRef = useRef();
     const seekbg = useRef();
     const seekBar = useRef();
-    const url = 'https://spotify-backend-irv1.onrender.com'
-    // const url = 'http://localhost:4000'
-
+    // const url = 'https://spotify-backend-irv1.onrender.com'
+    const url = 'http://localhost:4000'
     const [songsData, setSongsData] = useState([]);
     const [userData, setUserData] = useState()
     const [albumsData, setalbumsData] = useState([])
@@ -88,6 +87,22 @@ const PlayerContextProvider = (props) => {
         }
     }
 
+    const TokenVerify = async () => {
+
+        try {
+            const response = await axios.get(`${url}/api/user/tokenverify`);
+            console.log(response)
+            // if (response && response.data && response.data.message) {
+            //     setUserData(response.data.message);
+            // } else {
+            //     console.log("Error: No message in response data");
+            // }
+        } catch (error) {
+            console.log("Error fetching data:", error);
+        }
+        
+    }
+
     const seeksong = async (e) => {
         audioRef.current.currentTime = ((e.nativeEvent.offsetX / seekbg.current.offsetWidth) * audioRef.current.duration);
     }
@@ -113,6 +128,7 @@ const PlayerContextProvider = (props) => {
     useEffect(() => {
         getSongsData();
         getAlbumsData();
+        TokenVerify();
     }, [])
 
 

@@ -11,7 +11,7 @@ const Login = () => {
         phone: "",
         password: ""
     })
-    const { setShowLogin, loginPage, SetloginPage, url,setUserData } = useContext(PlayerContext)
+    const { setShowLogin, loginPage, SetloginPage, url, setUserData } = useContext(PlayerContext)
 
     const onValueChange = (e) => {
         const name = e.target.name;
@@ -32,20 +32,25 @@ const Login = () => {
             newurl += "/api/user/signin"
             console.log(newurl)
         }
-
+        console.log(data)
         const responce = await axios.post(newurl, data)
+        console.log(`Response: ${responce}`)
         if (responce.data.result) {
 
             if (loginPage === "login") {
                 toast.success("login Sucess")
+                console.log(responce.data.token)
                 setUserData(responce.data.message)
+                setShowLogin(false)
             }
             if (loginPage === "signup") {
+                setShowLogin(true)
+                SetloginPage('login')
                 toast.success("Signup Sucess")
             }
-            setShowLogin(false)
+
         }
-        else{
+        else {
             toast.error(`${responce.data.message}`)
         }
 
